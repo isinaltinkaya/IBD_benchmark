@@ -92,22 +92,35 @@ def read_genetic_map_hapmap(file_input_name):
     return physical_positions, genetic_positions
 
 
-if __name__ == '__main__':
+
+def simulate(chromosome_id, 
+    input_map_file,
+    mutation_rate,
+    random_seed,
+    number_of_individuals_to_sample,
+    number_of_sites_array_template, 
+    physical_distance_to_sample,
+    minimum_genetic_length,
+    output_directory_path):
+
+
+# if __name__ == '__main__':
     print(f"start simulation")
 
-    print(f"start get arguments")
-    program_name = sys.argv[0]
-    program_arguments = sys.argv[1:]
-    chromosome_id = program_arguments[0]
-    input_map_file = program_arguments[1]
-    mutation_rate = program_arguments[2]
-    random_seed = program_arguments[3]
-    number_of_individuals_to_sample = program_arguments[4]
-    number_of_sites_array_template = program_arguments[5]
-    physical_distance_to_sample = program_arguments[6]
-    minimum_genetic_length = program_arguments[7]
-    output_directory_path = program_arguments[8]
+    # print(f"start get arguments")
+    # program_name = sys.argv[0]
+    # program_arguments = sys.argv[1:]
+    # chromosome_id = program_arguments[0]
+    # input_map_file = program_arguments[1]
+    # mutation_rate = program_arguments[2]
+    # random_seed = program_arguments[3]
+    # number_of_individuals_to_sample = program_arguments[4]
+    # number_of_sites_array_template = program_arguments[5]
+    # physical_distance_to_sample = program_arguments[6]
+    # minimum_genetic_length = program_arguments[7]
+    # output_directory_path = program_arguments[8]
 
+    program_name="msprime_simulation_functions"
     print(f"program={program_name},chromosome_id={chromosome_id},input_map_file={input_map_file},mutation_rate={mutation_rate},random_seed={random_seed},number_of_individuals_to_sample={number_of_individuals_to_sample},number_of_sites_array_template={number_of_sites_array_template},physical_distance_to_sample={physical_distance_to_sample},minimum_genetic_length={minimum_genetic_length},output_directory_path={output_directory_path}")
 
     mutation_rate_value = float(mutation_rate)
