@@ -162,7 +162,7 @@ if __name__ == '__main__':
 
     print(f"start simulate data")
     individuals_from_populations_to_sample_dictionary = {"CEU": number_of_individuals_to_sample_value}
-    tree_sequence_without_mutations = msprime.sim_ancestry(samples=individuals_from_populations_to_sample_dictionary, demography=out_of_africa_model_demography, ploidy=2, discrete_genome=True, recombination_rate=recombination_rate_map, random_seed=random_seed_value, record_provenance=False, model="dtwf")
+    tree_sequence_without_mutations = msprime.sim_ancestry(samples=individuals_from_populations_to_sample_dictionary, demography=out_of_africa_model_demography, ploidy=2, discrete_genome=True, recombination_rate=recombination_rate_map, random_seed=random_seed_value, record_provenance=False, model="hudson")
     tree_sequence = msprime.sim_mutations(tree_sequence_without_mutations, rate=mutation_rate_value, random_seed=random_seed_value, model=msprime.JC69(), discrete_genome=True)
     tree_sequence.dump(output_tree_file)
     print(f"number_of_trees={tree_sequence.num_trees}")
